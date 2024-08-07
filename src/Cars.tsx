@@ -56,7 +56,11 @@ export const Cars = () => {
           onChange={event => updateNewCar({ name: event.target.value })}
         />
         <label htmlFor="bodyType">Body type:</label>
-        <select id="bodyType" onChange={event => updateNewCar({ bodyType: getBodyType(event.target.value) })}>
+        <select
+          id="bodyType"
+          value={newCar.bodyType}
+          onChange={event => updateNewCar({ bodyType: getBodyType(event.target.value) })}
+        >
           {Car.bodyTypes.map(type => (
             <option key={type} value={type}>
               {type}
