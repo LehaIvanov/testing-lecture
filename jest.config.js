@@ -1,6 +1,6 @@
 export default {
   preset: `ts-jest`,
-  testEnvironment: `node`,
+  testEnvironment: `jsdom`,
   // setupFilesAfterEnv: ["jest-extended/all"],
   // moduleNameMapper: {
   //   "(.+)\\.js": "$1",
