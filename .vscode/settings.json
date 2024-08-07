@@ -1,0 +1,60 @@
+{
+  // editor
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "never",
+    "source.fixAll": "always"
+  },
+  "editor.rulers": [120],
+  "editor.linkedEditing": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  // errorLens
+  "errorLens.gutterIconSet": "circle",
+  "errorLens.statusBarIconsEnabled": true,
+  "errorLens.messageEnabled": false,
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.gutterIconSize": "150%",
+  // typescript
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.referencesCodeLens.enabled": true,
+  // scss
+  "scss.validate": false,
+  // jest
+  "jest.jestCommandLine": "npm run test",
+  "jest.runMode": "on-demand",
+  // eslint
+  "eslint.rules.customizations": [
+    {
+      "rule": "*",
+      "severity": "warn"
+    }
+  ],
+  "eslint.experimental.useFlatConfig": true,
+  // cSpell
+  "cSpell.diagnosticLevel": "Warning",
+  "cSpell.enabledLanguageIds": [
+    "css",
+    "scss",
+    "html",
+    "javascript",
+    "json",
+    "markdown",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+    "yml",
+    "mdx"
+  ],
+  // files
+  "files.exclude": {
+    ".git": true,
+    "node_modules": true,
+    "dist": true
+  },
+  // markdown
+  "markdown.validate.enabled": true
+}

@@ -1,0 +1,28 @@
+{
+  "name": "cars",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier . --check",
+    "lint:cspell": "cspell **",
+    "lint": "npm-run-all lint:*",
+    "ci": "npm-run-all lint test"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "cspell": "^8.13.1",
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^9.1.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.4",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.0.0"
+  }
+}
