@@ -1,4 +1,6 @@
-type BodyType = `coupe` | `hatchback` | `SUV` | `crossover` | `sedan` | `wagon` | `pickup-truck`;
+const bodyTypes = [`coupe`, `hatchback`, `SUV`, `crossover`, `sedan`, `wagon`, `pickup-truck`] as const;
+
+export type BodyType = (typeof bodyTypes)[number];
 
 export type Car = {
   id: string;
@@ -7,14 +9,13 @@ export type Car = {
 };
 
 const add = (car: Car, cars: Car[]) => {
-  if (cars.some(item => item.name === car.name)) {
+  if (car.name === `` || cars.some(item => item.name === car.name)) {
     return [...cars];
   }
 
   return [...cars, car];
 };
 
-const isValidCar = (value: Partial<Car>): value is Car =>
-  value.bodyType !== undefined && value.id !== undefined && value.name !== undefined;
+const isBodyType = (value: string): value is BodyType => bodyTypes.find((type: string) => type === value) !== undefined;
 
-export const Car = { add, isValidCar };
+export const Car = { add, bodyTypes, isBodyType };
